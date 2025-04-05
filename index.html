@@ -1,280 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Best Value Proposition</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f9f9f9;
-        }
-
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background-color: #f9f9f9;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-size: 14px;
-        }
-
-        .nav-brand {
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 1px;
-            font-size: 16px;
-        }
-
-        .nav-button {
-            background-color: #000;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-size: 12px;
-        }
-
-        /* Hero Section */
-        .hero-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 80px 80px;
-            max-width: 1400px;
-            margin: 0 auto;
-            gap: 60px;
-        }
-
-        .hero-content {
-            flex: 1;
-            max-width: 500px;
-        }
-
-        .hero-content h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            line-height: 1.2;
-            color: #000;
-        }
-
-        .hero-content p {
-            color: #555;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        .cta-button {
-            background-color: #000;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .hero-image {
-            flex: 1;
-            position: relative;
-        }
-
-        .placeholder-box {
-            width: 100%;
-            height: 200px;
-            border: 1px solid #ddd;
-            background-color: white;
-            position: relative;
-        }
-
-        .browser-dots {
-            display: flex;
-            gap: 5px;
-            padding: 10px;
-        }
-
-        .dot {
-            width: 10px;
-            height: 10px;
-            border: 1px solid #ddd;
-            border-radius: 50%;
-        }
-
-        .geometric-elements {
-            position: absolute;
-            right: -20px;
-            bottom: -100px;
-        }
-
-        .line {
-            position: absolute;
-            width: 80px;
-            height: 1px;
-            background-color: #000;
-            transform: rotate(45deg);
-            right: 40px;
-            top: 20px;
-        }
-
-        .square {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            border: 1px solid #000;
-            right: -20px;
-            bottom: 0;
-            background-color: transparent;
-        }
-
-        .circle {
-            display: none; /* Removed in updated version */
-        }
-
-        /* Footer Section */
-        footer {
-            background-color: #000;
-            color: white;
-            padding: 40px 80px;
-        }
-
-        .footer-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .footer-title {
-            margin-bottom: 20px;
-            font-size: 18px;
-            font-weight: normal;
-        }
-
-        .footer-content {
-            margin-bottom: 30px;
-            color: #ccc;
-            font-size: 14px;
-            line-height: 1.6;
-            max-width: 600px;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .footer-link {
-            width: 80px;
-            height: 30px;
-            background-color: white;
-        }
-
-        /* Additional geometric element */
-        .geometric-circle {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            border: 1px solid #000;
-            border-radius: 50%;
-            bottom: -180px;
-            right: 70px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero-container {
-                flex-direction: column;
-                padding: 40px 20px;
-            }
-
-            .hero-content {
-                padding-right: 0;
-                margin-bottom: 40px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .geometric-elements {
-                display: none;
-            }
-            
-            .geometric-circle {
-                display: none;
-            }
-            
-            footer {
-                padding: 40px 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="nav-links">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            <a href="#">Link 4</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUMINA - Elevate Your Digital Experience</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">LUMINA</div>
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#resources">Resources</a></li>
+        </ul>
+        <div class="hamburger">
+          <i class="fas fa-bars"></i>
         </div>
-        <div class="nav-brand">LOREM</div>
-        <button class="nav-button">LOREM</button>
-    </nav>
+      </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero-container">
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
         <div class="hero-content">
-            <h1>Your Best Value Proposition</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <button class="cta-button">Start free trial</button>
+          <h1>Elevate Your Digital Experience</h1>
+          <p>
+            Transform your workflow with our intuitive platform designed for
+            creators, innovators, and visionaries.
+          </p>
+          <button class="cta-button">Start free trial</button>
         </div>
         <div class="hero-image">
-            <div class="placeholder-box">
-                <div class="browser-dots">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                </div>
-            </div>
-            <div class="geometric-elements">
-                <div class="line"></div>
-                <div class="square"></div>
-            </div>
-            <div class="geometric-circle"></div>
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            alt="Digital workspace"
+          />
         </div>
-    </section>
+      </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-container">
-            <h3 class="footer-title">The Publication</h3>
-            <p class="footer-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <div class="footer-links">
-                <div class="footer-link"></div>
-                <div class="footer-link"></div>
-                <div class="footer-link"></div>
-                <div class="footer-link"></div>
-                <div class="footer-link"></div>
+      <!-- Features Section -->
+      <section id="features" class="feature-section">
+        <h2>Powerful Features</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-bolt"></i>
             </div>
+            <h3>Lightning Fast</h3>
+            <p>
+              Optimized performance that keeps you productive without
+              interruptions.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-lock"></i>
+            </div>
+            <h3>Bank-Level Security</h3>
+            <p>
+              Enterprise-grade protection for your sensitive data and documents.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-sync-alt"></i>
+            </div>
+            <h3>Real-Time Sync</h3>
+            <p>
+              Changes update instantly across all your devices and team members.
+            </p>
+          </div>
         </div>
+      </section>
+
+      <!-- Solutions Section -->
+      <section id="solutions" class="solutions-section">
+        <h2>Tailored Solutions</h2>
+        <div class="solutions-container">
+          <div class="solution-content">
+            <h3>For Your Business Needs</h3>
+            <p>
+              Customizable solutions that adapt to your unique workflow
+              requirements and scale with your business.
+            </p>
+            <ul class="solution-list">
+              <li>
+                <i class="fas fa-check"></i> Enterprise-grade infrastructure
+              </li>
+              <li><i class="fas fa-check"></i> Custom integration options</li>
+              <li><i class="fas fa-check"></i> Dedicated account management</li>
+            </ul>
+          </div>
+          <div class="solution-image">
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Business solutions"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section id="pricing" class="pricing-section">
+        <h2>Simple, Transparent Pricing</h2>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Starter</h3>
+            <div class="price">$19<span>/month</span></div>
+            <ul class="pricing-features">
+              <li>Up to 5 users</li>
+              <li>Basic features</li>
+              <li>Email support</li>
+            </ul>
+            <button class="secondary-button">Get Started</button>
+          </div>
+          <div class="pricing-card featured">
+            <div class="featured-badge">Most Popular</div>
+            <h3>Professional</h3>
+            <div class="price">$49<span>/month</span></div>
+            <ul class="pricing-features">
+              <li>Up to 20 users</li>
+              <li>Advanced features</li>
+              <li>Priority support</li>
+            </ul>
+            <button class="cta-button">Get Started</button>
+          </div>
+          <div class="pricing-card">
+            <h3>Enterprise</h3>
+            <div class="price">Custom</div>
+            <ul class="pricing-features">
+              <li>Unlimited users</li>
+              <li>All features</li>
+              <li>24/7 support</li>
+            </ul>
+            <button class="secondary-button">Contact Sales</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resources Section -->
+      <section id="resources" class="resources-section">
+        <h2>Learning Resources</h2>
+        <div class="resources-grid">
+          <div class="resource-card">
+            <div class="resource-image">
+              <img
+                src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Tutorials"
+              />
+            </div>
+            <div class="resource-content">
+              <h3>Video Tutorials</h3>
+              <p>Step-by-step guides to help you master our platform.</p>
+              <a href="#" class="resource-link"
+                >Explore tutorials <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-image">
+              <img
+                src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Documentation"
+              />
+            </div>
+            <div class="resource-content">
+              <h3>Documentation</h3>
+              <p>Comprehensive technical documentation for developers.</p>
+              <a href="#" class="resource-link"
+                >Read docs <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-image">
+              <img
+                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Blog"
+              />
+            </div>
+            <div class="resource-content">
+              <h3>Blog</h3>
+              <p>Latest news, tips, and industry insights.</p>
+              <a href="#" class="resource-link"
+                >Read blog <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials-section">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonials-container">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="quote-icon">"</div>
+              <p class="testimonial-text">
+                Lumina has completely transformed our team's productivity. The
+                intuitive interface and powerful features have saved us
+                countless hours every week.
+              </p>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                    alt="Sarah Johnson"
+                  />
+                </div>
+                <div class="author-info">
+                  <h4>Sarah Johnson</h4>
+                  <p>CEO, TechSolutions Inc.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="quote-icon">"</div>
+              <p class="testimonial-text">
+                As a designer, I appreciate how Lumina makes collaboration
+                effortless. The real-time feedback features have improved our
+                creative process dramatically.
+              </p>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    alt="Michael Chen"
+                  />
+                </div>
+                <div class="author-info">
+                  <h4>Michael Chen</h4>
+                  <p>Creative Director, Studio Alpha</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="quote-icon">"</div>
+              <p class="testimonial-text">
+                The customer support team at Lumina is exceptional. They've
+                helped us customize the platform to perfectly fit our unique
+                workflow requirements.
+              </p>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/68.jpg"
+                    alt="Elena Rodriguez"
+                  />
+                </div>
+                <div class="author-info">
+                  <h4>Elena Rodriguez</h4>
+                  <p>Operations Manager, Global Corp</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <h2>Ready to Transform Your Workflow?</h2>
+        <p>
+          Join thousands of businesses using Lumina to power their productivity.
+        </p>
+        <button class="cta-button">Start Your Free Trial</button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>LUMINA</h3>
+          <p>
+            Elevating digital experiences through thoughtful design and
+            innovative technology.
+          </p>
+        </div>
+        <div class="footer-links">
+          <div class="link-column">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#">Integrations</a></li>
+            </ul>
+          </div>
+          <div class="link-column">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="link-column">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#resources">Help Center</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Webinars</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Lumina. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
     </footer>
-</body>
+
+    <script src="script.js"></script>
+  </body>
 </html>
