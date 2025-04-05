@@ -1,5 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle dengan pengecekan elemen
+    // Preloader
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        window.addEventListener('load', function() {
+            preloader.classList.add('fade-out');
+            setTimeout(() => preloader.remove(), 500);
+        });
+    }
+
+    // Mobile menu toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     
@@ -10,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Smooth scrolling dengan pengecekan
+    // Smooth scrolling
     document.querySelectorAll('.nav-links a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -64,6 +73,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Parallax effect for hero image
+    const heroImage = document.querySelector('.hero-image');
+    if (heroImage) {
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.pageYOffset;
+            heroImage.style.transform = `translateY(${scrollPosition * 0.2}px)`;
+        });
+    }
+
     // Button hover effects
     const buttons = document.querySelectorAll('.cta-button, .secondary-button, .add-to-cart');
     
@@ -81,13 +99,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const animateOnScroll = function() {
         const elements = document.querySelectorAll('.product-card, .service-card, .testimonial-card, .tip-card');
         
-        elements.forEach(element => {
+        elements.forEach((element, index) => {
             const elementPosition = element.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
             
             if (elementPosition < windowHeight - 100) {
                 element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
+                element.style.transform = 'translateY(0) scale(1)';
+                element.style.transitionDelay = `${index * 0.1}s`;
             }
         });
     };
@@ -97,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
     animatedElements.forEach(element => {
         if (element) {
             element.style.opacity = '0';
-            element.style.transform = 'translateY(30px)';
+            element.style.transform = 'translateY(50px) scale(0.95)';
             element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         }
     });

@@ -6,7 +6,7 @@
     <title>PawParadise</title>
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500;600&display=swap"
     />
     <link
       rel="stylesheet"
@@ -15,17 +15,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader">
+        <i class="fas fa-paw"></i>
+      </div>
+    </div>
+
     <header class="header">
       <nav class="navbar">
-        <div class="logo"><i class="fas fa-paw"></i> PawParadise</div>
+        <!-- Swapped positions: nav-links now on the left -->
         <ul class="nav-links">
           <li><a href="#products">Products</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#tips">Care Tips</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
         </ul>
+        <!-- Swapped positions: logo now on the right -->
+        <div class="logo"><i class="fas fa-paw"></i> PawParadise</div>
         <div class="hamburger">
-            <i class="fas fa-bars"></i>
+          <i class="fas fa-bars"></i>
         </div>
       </nav>
     </header>
@@ -40,7 +49,9 @@
             happy and healthy.
           </p>
           <div class="hero-buttons">
-            <button class="secondary-button">Learn More</button>
+            <button class="secondary-button">
+              Learn More <i class="fas fa-paw"></i>
+            </button>
           </div>
         </div>
         <div class="hero-image">
@@ -49,6 +60,12 @@
             alt="Happy golden retriever"
           />
         </div>
+        <svg class="wave" viewBox="0 0 1440 120">
+          <path
+            fill="var(--light)"
+            d="M0,64L80,58.7C160,53,320,43,480,42.7C640,43,800,53,960,58.7C1120,64,1280,64,1360,64L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+          ></path>
+        </svg>
       </section>
 
       <!-- Products Section -->
@@ -164,7 +181,6 @@
         <p class="section-subtitle">
           Expert advice to keep your pets happy and healthy
         </p>
-
         <div class="tips-container">
           <div class="tip-card">
             <div class="tip-image">
@@ -184,7 +200,6 @@
               ></a>
             </div>
           </div>
-
           <div class="tip-card">
             <div class="tip-image">
               <img
@@ -203,7 +218,6 @@
               ></a>
             </div>
           </div>
-
           <div class="tip-card">
             <div class="tip-image">
               <img
@@ -223,7 +237,6 @@
             </div>
           </div>
         </div>
-
         <div class="tips-button">
           <button class="cta-button">View All Tips</button>
         </div>
@@ -321,15 +334,10 @@
       <!-- CTA Section -->
       <section class="cta-section">
         <div class="cta-container">
-          <h2>Join Our Pet Lovers Community</h2>
+          <h2>Make Every Moment Count</h2>
           <p>
-            Subscribe to get 15% off your first order and receive pet care tips
-            and exclusive offers
+            Spend quality time with your pets – their love and joy are the greatest rewards of all.
           </p>
-          <form class="newsletter-form">
-            <input type="email" placeholder="Enter your email" required />
-            <button type="submit" class="cta-button">Subscribe</button>
-          </form>
         </div>
       </section>
     </main>
@@ -377,7 +385,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2023 PawParadise. All rights reserved.</p>
+        <p>© 2023 PawParadise. All rights reserved.</p>
         <div class="legal-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
