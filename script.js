@@ -1,82 +1,85 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
+    // Mobile menu toggle dengan pengecekan elemen
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     
-    hamburger.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    }
 
-    // Smooth scrolling for navigation links
+    // Smooth scrolling dengan pengecekan
     document.querySelectorAll('.nav-links a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             
             const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                // Calculate position considering fixed header
-                const headerHeight = document.querySelector('.header').offsetHeight;
-                const targetPosition = targetElement.offsetTop - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu if open
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                    hamburger.classList.remove('active');
+            if (targetId === '#' || targetId.startsWith('#')) {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('.header')?.offsetHeight || 80;
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navLinks?.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        hamburger?.classList.remove('active');
+                    }
                 }
             }
         });
     });
 
-    // Highlight active navigation item based on scroll position
+    // Highlight active navigation item
     const sections = document.querySelectorAll('section[id]');
     const navItems = document.querySelectorAll('.nav-links a');
     
-    window.addEventListener('scroll', function() {
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            const headerHeight = document.querySelector('.header').offsetHeight;
+    if (sections.length && navItems.length) {
+        window.addEventListener('scroll', function() {
+            let current = '';
             
-            if (pageYOffset >= (sectionTop - headerHeight - 50)) {
-                current = section.getAttribute('id');
-            }
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const headerHeight = document.querySelector('.header')?.offsetHeight || 80;
+                
+                if (pageYOffset >= (sectionTop - headerHeight - 50)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
         });
-        
-        navItems.forEach(item => {
-            item.classList.remove('active');
-            if (item.getAttribute('href') === `#${current}`) {
-                item.classList.add('active');
-            }
-        });
-    });
+    }
 
     // Button hover effects
-    const buttons = document.querySelectorAll('.cta-button, .secondary-button');
+    const buttons = document.querySelectorAll('.cta-button, .secondary-button, .add-to-cart');
     
     buttons.forEach(button => {
-        button.addEventListener('mouseenter', function() {
+        button?.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-3px)';
         });
         
-        button.addEventListener('mouseleave', function() {
+        button?.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0)';
         });
     });
 
     // Animation on scroll
     const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.feature-card, .pricing-card, .resource-card');
+        const elements = document.querySelectorAll('.product-card, .service-card, .testimonial-card, .tip-card');
         
         elements.forEach(element => {
             const elementPosition = element.getBoundingClientRect().top;
@@ -90,16 +93,38 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Set initial state for animated elements
-    const animatedElements = document.querySelectorAll('.feature-card, .pricing-card, .resource-card');
+    const animatedElements = document.querySelectorAll('.product-card, .service-card, .testimonial-card, .tip-card');
     animatedElements.forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(30px)';
-        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        if (element) {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        }
     });
 
-    // Run once on load
-    animateOnScroll();
+    // Run animations
+    if (animatedElements.length) {
+        animateOnScroll();
+        window.addEventListener('scroll', animateOnScroll);
+    }
+
+    // Cart functionality
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
     
-    // Then run on scroll
-    window.addEventListener('scroll', animateOnScroll);
+    addToCartButtons.forEach(button => {
+        button?.addEventListener('click', function() {
+            const productCard = this.closest('.product-card');
+            if (productCard) {
+                const productName = productCard.querySelector('h3')?.textContent || 'Product';
+                const productPrice = productCard.querySelector('.product-price')?.textContent || '';
+                
+                alert(`Added ${productName} (${productPrice}) to your cart!`);
+                
+                this.textContent = 'Added!';
+                setTimeout(() => {
+                    this.textContent = 'Add to Cart';
+                }, 1500);
+            }
+        });
+    });
 });

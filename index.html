@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LUMINA - Elevate Your Digital Experience</title>
+    <title>PawParadise</title>
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
     />
     <link
       rel="stylesheet"
@@ -17,15 +17,15 @@
   <body>
     <header class="header">
       <nav class="navbar">
-        <div class="logo">LUMINA</div>
+        <div class="logo"><i class="fas fa-paw"></i> PawParadise</div>
         <ul class="nav-links">
-          <li><a href="#features">Features</a></li>
-          <li><a href="#solutions">Solutions</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#resources">Resources</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#tips">Care Tips</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
         </ul>
         <div class="hamburger">
-          <i class="fas fa-bars"></i>
+            <i class="fas fa-bars"></i>
         </div>
       </nav>
     </header>
@@ -34,298 +34,354 @@
       <!-- Hero Section -->
       <section class="hero">
         <div class="hero-content">
-          <h1>Elevate Your Digital Experience</h1>
+          <h1>Premium Care for Your Furry Friends</h1>
           <p>
-            Transform your workflow with our intuitive platform designed for
-            creators, innovators, and visionaries.
+            Discover high-quality pet products and services that keep your pets
+            happy and healthy.
           </p>
-          <button class="cta-button">Start free trial</button>
+          <div class="hero-buttons">
+            <button class="secondary-button">Learn More</button>
+          </div>
         </div>
         <div class="hero-image">
           <img
-            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-            alt="Digital workspace"
+            src="https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            alt="Happy golden retriever"
           />
         </div>
       </section>
 
-      <!-- Features Section -->
-      <section id="features" class="feature-section">
-        <h2>Powerful Features</h2>
-        <div class="feature-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-bolt"></i>
+      <!-- Products Section -->
+      <section id="products" class="section products-section">
+        <h2 class="section-title">Our Best Sellers</h2>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-badge">New</div>
+            <div class="product-image">
+              <img
+                src="https://i.pinimg.com/736x/90/13/2b/90132b1f719eadc58d488d2d28102b83.jpg"
+                alt="Organic pet food"
+              />
             </div>
-            <h3>Lightning Fast</h3>
-            <p>
-              Optimized performance that keeps you productive without
-              interruptions.
-            </p>
+            <div class="product-info">
+              <h3>Organic Pet Food</h3>
+              <p class="product-description">
+                Nutrient-rich, all-natural ingredients for optimal health
+              </p>
+              <div class="product-price">$24.99</div>
+            </div>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-lock"></i>
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="https://i.pinimg.com/736x/7c/e4/36/7ce436209878fc519a80c87421fc7fcf.jpg"
+                alt="Designer pet bed"
+              />
             </div>
-            <h3>Bank-Level Security</h3>
-            <p>
-              Enterprise-grade protection for your sensitive data and documents.
-            </p>
+            <div class="product-info">
+              <h3>Luxury Pet Bed</h3>
+              <p class="product-description">
+                Ultra-soft orthopedic memory foam for joint support
+              </p>
+              <div class="product-price">$59.99</div>
+            </div>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-sync-alt"></i>
+          <div class="product-card">
+            <div class="product-badge">-20%</div>
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                alt="Pet grooming kit"
+              />
             </div>
-            <h3>Real-Time Sync</h3>
-            <p>
-              Changes update instantly across all your devices and team members.
-            </p>
+            <div class="product-info">
+              <h3>Premium Grooming Kit</h3>
+              <p class="product-description">
+                Everything you need for professional grooming at home
+              </p>
+              <div class="product-price">
+                <span class="original-price">$45.99</span> $36.79
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Solutions Section -->
-      <section id="solutions" class="solutions-section">
-        <h2>Tailored Solutions</h2>
-        <div class="solutions-container">
-          <div class="solution-content">
-            <h3>For Your Business Needs</h3>
+      <!-- Services Section -->
+      <section id="services" class="section services-section">
+        <div class="section-header">
+          <h2 class="section-title">Our Services</h2>
+          <p class="section-subtitle">
+            We offer comprehensive care for your beloved pets
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-cut"></i>
+            </div>
+            <h3>Professional Grooming</h3>
             <p>
-              Customizable solutions that adapt to your unique workflow
-              requirements and scale with your business.
+              Full-service grooming including bath, haircut, nail trimming, and
+              ear cleaning
             </p>
-            <ul class="solution-list">
-              <li>
-                <i class="fas fa-check"></i> Enterprise-grade infrastructure
-              </li>
-              <li><i class="fas fa-check"></i> Custom integration options</li>
-              <li><i class="fas fa-check"></i> Dedicated account management</li>
-            </ul>
+            <a href="#" class="service-link"
+              >Book Now <i class="fas fa-arrow-right"></i
+            ></a>
           </div>
-          <div class="solution-image">
-            <img
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              alt="Business solutions"
-            />
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3>Pet Boarding</h3>
+            <p>
+              Safe and comfortable boarding with 24/7 supervision and daily
+              exercise
+            </p>
+            <a href="#" class="service-link"
+              >Learn More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-medkit"></i>
+            </div>
+            <h3>Veterinary Care</h3>
+            <p>
+              Regular check-ups, vaccinations, and emergency services by
+              licensed vets
+            </p>
+            <a href="#" class="service-link"
+              >Schedule Visit <i class="fas fa-arrow-right"></i
+            ></a>
           </div>
         </div>
       </section>
 
-      <!-- Pricing Section -->
-      <section id="pricing" class="pricing-section">
-        <h2>Simple, Transparent Pricing</h2>
-        <div class="pricing-grid">
-          <div class="pricing-card">
-            <h3>Starter</h3>
-            <div class="price">$19<span>/month</span></div>
-            <ul class="pricing-features">
-              <li>Up to 5 users</li>
-              <li>Basic features</li>
-              <li>Email support</li>
-            </ul>
-            <button class="secondary-button">Get Started</button>
+      <!-- Pet Care Tips Section -->
+      <section id="tips" class="section tips-section">
+        <h2 class="section-title">Pet Care Tips</h2>
+        <p class="section-subtitle">
+          Expert advice to keep your pets happy and healthy
+        </p>
+
+        <div class="tips-container">
+          <div class="tip-card">
+            <div class="tip-image">
+              <img
+                src="https://images.unsplash.com/photo-1601758003122-53c40e686a19?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                alt="Dog grooming"
+              />
+            </div>
+            <div class="tip-content">
+              <h3>Grooming Essentials</h3>
+              <p>
+                Learn the proper techniques for brushing, bathing, and nail
+                trimming to keep your pet looking their best.
+              </p>
+              <a href="#" class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
           </div>
-          <div class="pricing-card featured">
-            <div class="featured-badge">Most Popular</div>
-            <h3>Professional</h3>
-            <div class="price">$49<span>/month</span></div>
-            <ul class="pricing-features">
-              <li>Up to 20 users</li>
-              <li>Advanced features</li>
-              <li>Priority support</li>
-            </ul>
-            <button class="cta-button">Get Started</button>
+
+          <div class="tip-card">
+            <div class="tip-image">
+              <img
+                src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                alt="Pet nutrition"
+              />
+            </div>
+            <div class="tip-content">
+              <h3>Nutrition Guide</h3>
+              <p>
+                Discover how to choose the right food for your pet's age, breed,
+                and health conditions.
+              </p>
+              <a href="#" class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
           </div>
-          <div class="pricing-card">
-            <h3>Enterprise</h3>
-            <div class="price">Custom</div>
-            <ul class="pricing-features">
-              <li>Unlimited users</li>
-              <li>All features</li>
-              <li>24/7 support</li>
-            </ul>
-            <button class="secondary-button">Contact Sales</button>
+
+          <div class="tip-card">
+            <div class="tip-image">
+              <img
+                src="https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                alt="Pet training"
+              />
+            </div>
+            <div class="tip-content">
+              <h3>Training Basics</h3>
+              <p>
+                Effective techniques for house training, basic commands, and
+                behavior correction.
+              </p>
+              <a href="#" class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
           </div>
         </div>
-      </section>
 
-      <!-- Resources Section -->
-      <section id="resources" class="resources-section">
-        <h2>Learning Resources</h2>
-        <div class="resources-grid">
-          <div class="resource-card">
-            <div class="resource-image">
-              <img
-                src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                alt="Tutorials"
-              />
-            </div>
-            <div class="resource-content">
-              <h3>Video Tutorials</h3>
-              <p>Step-by-step guides to help you master our platform.</p>
-              <a href="#" class="resource-link"
-                >Explore tutorials <i class="fas fa-arrow-right"></i
-              ></a>
-            </div>
-          </div>
-          <div class="resource-card">
-            <div class="resource-image">
-              <img
-                src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                alt="Documentation"
-              />
-            </div>
-            <div class="resource-content">
-              <h3>Documentation</h3>
-              <p>Comprehensive technical documentation for developers.</p>
-              <a href="#" class="resource-link"
-                >Read docs <i class="fas fa-arrow-right"></i
-              ></a>
-            </div>
-          </div>
-          <div class="resource-card">
-            <div class="resource-image">
-              <img
-                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                alt="Blog"
-              />
-            </div>
-            <div class="resource-content">
-              <h3>Blog</h3>
-              <p>Latest news, tips, and industry insights.</p>
-              <a href="#" class="resource-link"
-                >Read blog <i class="fas fa-arrow-right"></i
-              ></a>
-            </div>
-          </div>
+        <div class="tips-button">
+          <button class="cta-button">View All Tips</button>
         </div>
       </section>
 
       <!-- Testimonials Section -->
-      <section class="testimonials-section">
-        <h2>What Our Customers Say</h2>
+      <section id="testimonials" class="section testimonials-section">
+        <h2 class="section-title">Happy Pets, Happy Owners</h2>
         <div class="testimonials-container">
           <div class="testimonial-card">
             <div class="testimonial-content">
-              <div class="quote-icon">"</div>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
               <p class="testimonial-text">
-                Lumina has completely transformed our team's productivity. The
-                intuitive interface and powerful features have saved us
-                countless hours every week.
+                "The grooming service is exceptional! My cat actually seems to
+                enjoy her visits, which says a lot."
               </p>
               <div class="testimonial-author">
                 <div class="author-image">
                   <img
-                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                    src="https://randomuser.me/api/portraits/women/32.jpg"
                     alt="Sarah Johnson"
                   />
                 </div>
                 <div class="author-info">
                   <h4>Sarah Johnson</h4>
-                  <p>CEO, TechSolutions Inc.</p>
+                  <p>Cat Owner</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="testimonial-card">
             <div class="testimonial-content">
-              <div class="quote-icon">"</div>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
               <p class="testimonial-text">
-                As a designer, I appreciate how Lumina makes collaboration
-                effortless. The real-time feedback features have improved our
-                creative process dramatically.
+                "The organic food has made such a difference in my dog's energy
+                levels and coat quality."
               </p>
               <div class="testimonial-author">
                 <div class="author-image">
                   <img
-                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    src="https://randomuser.me/api/portraits/men/45.jpg"
                     alt="Michael Chen"
                   />
                 </div>
                 <div class="author-info">
                   <h4>Michael Chen</h4>
-                  <p>Creative Director, Studio Alpha</p>
+                  <p>Dog Owner</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              <div class="quote-icon">"</div>
-              <p class="testimonial-text">
-                The customer support team at Lumina is exceptional. They've
-                helped us customize the platform to perfectly fit our unique
-                workflow requirements.
-              </p>
-              <div class="testimonial-author">
-                <div class="author-image">
-                  <img
-                    src="https://randomuser.me/api/portraits/women/68.jpg"
-                    alt="Elena Rodriguez"
-                  />
-                </div>
-                <div class="author-info">
-                  <h4>Elena Rodriguez</h4>
-                  <p>Operations Manager, Global Corp</p>
-                </div>
-              </div>
-            </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section about-section">
+        <div class="about-container">
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Our pet shop"
+            />
+          </div>
+          <div class="about-content">
+            <h2>Our Story</h2>
+            <p>
+              Founded in 2015, PawParadise began as a small local pet store with
+              a big dream: to provide the highest quality products and services
+              for pets and their owners. Today, we're proud to serve thousands
+              of happy pets with our carefully curated selection and expert
+              services.
+            </p>
+            <p>
+              Our team consists of passionate pet lovers and certified
+              professionals dedicated to improving the lives of animals and
+              making pet ownership easier and more enjoyable.
+            </p>
+            <button class="cta-button">Visit Our Store</button>
           </div>
         </div>
       </section>
 
       <!-- CTA Section -->
       <section class="cta-section">
-        <h2>Ready to Transform Your Workflow?</h2>
-        <p>
-          Join thousands of businesses using Lumina to power their productivity.
-        </p>
-        <button class="cta-button">Start Your Free Trial</button>
+        <div class="cta-container">
+          <h2>Join Our Pet Lovers Community</h2>
+          <p>
+            Subscribe to get 15% off your first order and receive pet care tips
+            and exclusive offers
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit" class="cta-button">Subscribe</button>
+          </form>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-about">
-          <h3>LUMINA</h3>
-          <p>
-            Elevating digital experiences through thoughtful design and
-            innovative technology.
-          </p>
+          <div class="logo"><i class="fas fa-paw"></i> PawParadise</div>
+          <p>Premium pet products and services with love and care.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          </div>
         </div>
         <div class="footer-links">
           <div class="link-column">
-            <h4>Product</h4>
+            <h4>Shop</h4>
             <ul>
-              <li><a href="#features">Features</a></li>
-              <li><a href="#pricing">Pricing</a></li>
-              <li><a href="#">Integrations</a></li>
+              <li><a href="#">Dog Supplies</a></li>
+              <li><a href="#">Cat Supplies</a></li>
+              <li><a href="#">Small Pets</a></li>
+              <li><a href="#">New Arrivals</a></li>
+            </ul>
+          </div>
+          <div class="link-column">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Grooming</a></li>
+              <li><a href="#">Boarding</a></li>
+              <li><a href="#">Training</a></li>
+              <li><a href="#">Veterinary</a></li>
             </ul>
           </div>
           <div class="link-column">
             <h4>Company</h4>
             <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Careers</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Team</a></li>
               <li><a href="#">Blog</a></li>
-            </ul>
-          </div>
-          <div class="link-column">
-            <h4>Resources</h4>
-            <ul>
-              <li><a href="#resources">Help Center</a></li>
-              <li><a href="#">Community</a></li>
-              <li><a href="#">Webinars</a></li>
+              <li><a href="#">Contact</a></li>
             </ul>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2023 Lumina. All rights reserved.</p>
+        <p>&copy; 2023 PawParadise. All rights reserved.</p>
         <div class="legal-links">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">Cookies</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Shipping Policy</a>
         </div>
       </div>
     </footer>
